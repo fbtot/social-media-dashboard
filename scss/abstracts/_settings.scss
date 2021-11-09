@@ -1,10 +1,20 @@
-$base-font-size: 16px;
-$small-font-size: 16px * 0.9;
+$base-font-size: 14px;
+$small-font-size: 14px * 0.9;
 $desktop-width: 800px;
 $mobile-width: $desktop-width - 1px;
 
 :root {
   // Colors
+  // Primary
+
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+
   --text-color: hsl(0, 0%, 7%);
   --accent-color: hsl(216, 61%, 54%);
   --grey300: hsl(0, 0%, 70%);
@@ -14,12 +24,30 @@ $mobile-width: $desktop-width - 1px;
   --base-font-size: #{$base-font-size};
   --small-font-size: #{$small-font-size};
   --line-height: 1.6em;
-  --body-font-family: "Open Sans", sans-serif;
-  --headings-font-family: "Raleway", sans-serif;
+  --body-font-family: "Inter", sans-serif;
+  --headings-font-family: var(--body-font-family);
   --h1-font-size: 2.7rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.5rem;
   --h4-font-size: 1.3rem;
   --h5-font-size: 1.1rem;
   --h6-font-size: 1rem;
+}
+
+.dark-theme {
+  --very-dark-blue: -hsl(230, 17%, 14%); //-bg
+  --very-dark-blue: hsl(232, 19%, 15%); // top bg pattern
+  --dark-desaturated-blue: hsl(228, 28%, 20%); // card bg
+  --desaturated-blue: hsl(228, 34%, 66%); // text
+  --white: hsl(0, 0%, 100%); // text
+  --toggle: linear-gradient (hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+}
+
+.light-theme {
+  --toggle: hsl(230, 22%, 74%);
+  --white: hsl(0, 0%, 100%); // bg
+  --very-pale-blue: hsl(225, 100%, 98%); // top bg pattern
+  --light-grayish-blue: hsl(227, 47%, 96%); // card bg
+  --dark-grayish-blue: hsl(228, 12%, 44%); // text
+  --very-dark-blue: hsl(230, 17%, 14%); // text
 }
