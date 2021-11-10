@@ -13,6 +13,6 @@
   transition: 0.2s;
 }
 
-.theme-toggle__right:checked ~ .theme-toggle__thumb {
+.theme-toggle--right:checked ~ .theme-toggle__thumb {
   left: 2rem;
 }
