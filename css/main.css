@@ -89,6 +89,17 @@
   --very-dark-blue: hsl(230, 17%, 14%);
 }
 
+.followers__header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -225,6 +236,34 @@ select {
 button,
 input[type=submit] {
   cursor: pointer;
+}
+
+.container {
+  --padding-container: 1.5rem;
+  margin: 0 auto;
+  max-width: calc(1110px + var(--padding-container) * 2);
+  padding: var(--padding-container);
+}
+
+.followers-container,
+.overview-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 2rem;
+  /* mixin mq */
+  /* end mixin mq */
+}
+@media screen and (min-width: 800px) {
+  .followers-container,
+.overview-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.followers__header,
+.overview__header {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .theme-toggle {

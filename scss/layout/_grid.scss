@@ -1,1 +1,29 @@
 @use "../index" as *;
+
+.container {
+  --padding-container: 1.5rem;
+
+  margin: 0 auto;
+  max-width: calc(1110px + (var(--padding-container) * 2));
+  padding: var(--padding-container);
+}
+
+.followers-container,
+.overview-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 2rem;
+
+  @include mq($desktop-width, up) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.followers__header,
+.overview__header {
+  @include column-start-end(1, -1);
+}
+
+.followers__header {
+  @extend %hide-visually;
+}
