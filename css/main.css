@@ -107,7 +107,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  .prefers-color-scheme {
     --background: var(--white);
     --top-bg-pattern: var(--very.pale-blue);
     --card-bg: var(--light-grayish-blue);
@@ -116,7 +116,7 @@
   }
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  .prefers-color-scheme {
     --background: var(--very-dark-blue);
     --top-bg-pattern: var(--very-dark-blue2);
     --card-bg: var(--dark-desaturated-blue);
