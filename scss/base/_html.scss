@@ -9,6 +9,7 @@
 html {
   font-size: var(--base-font-size);
   scroll-behavior: smooth;
+  @include antialias;
 }
 
 body {
@@ -16,8 +17,9 @@ body {
   min-height: 100vh;
   line-height: 1.6em;
   font-family: var(--body-font-family);
-  color: var(--text-color);
-  background-color: rgb(238, 238, 238);
+  color: var(--text2);
+  background-color: var(--background);
+  transition: color 0.2s, background-color 0.2s;
 }
 
 /* ========================== § TYPOGRAPHY === */
