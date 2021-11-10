@@ -48,6 +48,16 @@
 }
 
 :root {
+  --very-dark-blue: hsl(230, 17%, 14%);
+  --very-dark-blue2: hsl(232, 19%, 15%);
+  --dark-desaturated-blue: hsl(228, 28%, 20%);
+  --desaturated-blue: hsl(228, 34%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --toggle: linear-gradient (hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+  --toggle: hsl(230, 22%, 74%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --light-grayish-blue: hsl(227, 47%, 96%);
+  --dark-grayish-blue: hsl(228, 12%, 44%);
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
@@ -72,21 +82,19 @@
 }
 
 .dark-theme {
-  --very-dark-blue: -hsl(230, 17%, 14%);
-  --very-dark-blue: hsl(232, 19%, 15%);
-  --dark-desaturated-blue: hsl(228, 28%, 20%);
-  --desaturated-blue: hsl(228, 34%, 66%);
-  --white: hsl(0, 0%, 100%);
-  --toggle: linear-gradient (hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+  --background: var(--very-dark-blue);
+  --top-bg-pattern: var(--very-dark-blue2);
+  --card-bg: var(--dark-desaturated-blue);
+  --text: var(--desaturated-blue);
+  --text2: var(--white);
 }
 
 .light-theme {
-  --toggle: hsl(230, 22%, 74%);
-  --white: hsl(0, 0%, 100%);
-  --very-pale-blue: hsl(225, 100%, 98%);
-  --light-grayish-blue: hsl(227, 47%, 96%);
-  --dark-grayish-blue: hsl(228, 12%, 44%);
-  --very-dark-blue: hsl(230, 17%, 14%);
+  --background: var(--white);
+  --top-bg-pattern: var(--very.pale-blue);
+  --card-bg: var(--light-grayish-blue);
+  --text: var(--dark-grayish-blue);
+  --text2: var(--very-dark-blue);
 }
 
 .followers__header {
