@@ -6,7 +6,7 @@
   src: url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.eot);
   src: url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.eot) format("embedded-opentype"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.woff2) format("woff2"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.woff) format("woff"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.ttf) format("truetype"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.svg?#boxicons) format("svg");
 }
-.bx, .more:before, .less:before {
+.bx, .more:before, .less:before, .theme-toggle--left, .theme-toggle--right {
   font-family: boxicons !important;
   font-weight: 400;
   font-style: normal;
@@ -30,13 +30,25 @@
   position: relative;
 }
 
-.bx-ul .bx, .bx-ul .more:before, .bx-ul .less:before {
+.bx-ul .bx, .bx-ul .more:before, .bx-ul .less:before, .bx-ul .theme-toggle--left, .bx-ul .theme-toggle--right {
   font-size: inherit;
   line-height: inherit;
   position: absolute;
   left: -2em;
   width: 2em;
   text-align: center;
+}
+
+.bxs-moon:before, .theme-toggle--left:before {
+  content: "\eb42";
+}
+
+.bxs-star:before {
+  content: "\ebac";
+}
+
+.bxs-sun:before, .theme-toggle--right:before {
+  content: "\ebb2";
 }
 
 .bx-caret-down:before, .less:before {
@@ -53,8 +65,8 @@
   --dark-desaturated-blue: hsl(228, 28%, 20%);
   --desaturated-blue: hsl(228, 34%, 66%);
   --white: hsl(0, 0%, 100%);
-  --toggle: linear-gradient (hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
-  --toggle: hsl(230, 22%, 74%);
+  --toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --toggle2: hsl(230, 22%, 74%);
   --very-pale-blue: hsl(225, 100%, 98%);
   --light-grayish-blue: hsl(227, 47%, 96%);
   --dark-grayish-blue: hsl(228, 12%, 44%);
@@ -97,7 +109,7 @@
   --text2: var(--very-dark-blue);
 }
 
-.followers__header {
+.theme-toggle label, .followers__header {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -283,25 +295,75 @@ input[type=submit] {
   grid-column-end: -1;
 }
 
+.theme-toggle-container {
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
 .theme-toggle {
+  /* @mixin circle */
+  border-radius: 1000px;
+  /* end @mixin circle */
   position: relative;
+  padding: 3px 3px;
+  background: var(--toggle);
+  display: flex;
+}
+.theme-toggle--left,
+.theme-toggle--center,
+.theme-toggle--right {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  position: relative;
+}
+.theme-toggle--left:before,
+.theme-toggle--center:before,
+.theme-toggle--right:before {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: -1.5rem;
+  color: var(--text2);
+  z-index: 10;
+  transition: 0.2s;
+}
+.theme-toggle--left:checked:before,
+.theme-toggle--center:checked:before,
+.theme-toggle--right:checked:before {
+  top: 4px;
+}
+
+.theme-toggle--left {
+  left: 3px;
+}
+
+.theme-toggle--right {
+  left: 3px;
 }
 
 .theme-toggle__thumb {
   /* @mixin circle */
   border-radius: 1000px;
-  width: 1rem;
-  height: 1rem;
+  width: 21px;
+  height: 21px;
   /* end @mixin circle */
   position: absolute;
-  background: #000;
-  top: 0;
-  left: 0;
+  background: var(--card-bg);
+  top: 3px;
+  left: 3px;
   transition: 0.2s;
 }
 
+.theme-toggle--center:checked ~ .theme-toggle__thumb {
+  left: 24px;
+}
+
 .theme-toggle--right:checked ~ .theme-toggle__thumb {
-  left: 2rem;
+  left: 45px;
 }
 
 /*# sourceMappingURL=main.css.map */
