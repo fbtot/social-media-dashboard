@@ -91,9 +91,6 @@
   --h4-font-size: 1.3rem;
   --h5-font-size: 1.1rem;
   --h6-font-size: 1rem;
-}
-
-.dark-theme {
   --background: var(--very-dark-blue);
   --top-bg-pattern: var(--very-dark-blue2);
   --card-bg: var(--dark-desaturated-blue);
@@ -109,6 +106,24 @@
   --text2: var(--very-dark-blue);
 }
 
+@media (prefers-color-scheme: light) {
+  .prefers-color-scheme {
+    --background: var(--white);
+    --top-bg-pattern: var(--very.pale-blue);
+    --card-bg: var(--light-grayish-blue);
+    --text: var(--dark-grayish-blue);
+    --text2: var(--very-dark-blue);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .prefers-color-scheme {
+    --background: var(--very-dark-blue);
+    --top-bg-pattern: var(--very-dark-blue2);
+    --card-bg: var(--dark-desaturated-blue);
+    --text: var(--desaturated-blue);
+    --text2: var(--white);
+  }
+}
 .theme-toggle label, .followers__header {
   position: absolute;
   width: 1px;
