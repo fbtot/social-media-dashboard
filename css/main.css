@@ -179,4 +179,25 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.theme-toggle {
+  position: relative;
+}
+
+.theme-toggle__thumb {
+  /* @mixin circle */
+  border-radius: 1000px;
+  width: 1rem;
+  height: 1rem;
+  /* end @mixin circle */
+  position: absolute;
+  background: #000;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.theme-toggle__right:checked ~ .theme-toggle__thumb {
+  left: 2rem;
+}
+
 /*# sourceMappingURL=main.css.map */
