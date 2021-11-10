@@ -245,6 +245,10 @@ input[type=submit] {
   padding: var(--padding-container);
 }
 
+.header {
+  display: flex;
+}
+
 .followers-container,
 .overview-container {
   display: grid;
