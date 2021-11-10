@@ -1,5 +1,6 @@
 // @use "./vendors/" as *
 
+@use "./base/boxicons" as *;
 @use "./base/html" as *;
 
 @use "./layout/grid" as *;
@@ -18,3 +19,13 @@
 @use "./pages/about" as *;
 
 // @use "./themes/" as * ;
+
+.more:before {
+  @extend .bx;
+  @extend .bx-caret-up;
+}
+
+.less:before {
+  @extend .bx;
+  @extend .bx-caret-down;
+}
