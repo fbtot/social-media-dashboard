@@ -6,7 +6,8 @@
   src: url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.eot);
   src: url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.eot) format("embedded-opentype"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.woff2) format("woff2"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.woff) format("woff"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.ttf) format("truetype"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.svg?#boxicons) format("svg");
 }
-.bx, .followers__difference:before, .theme-toggle--left, .theme-toggle--right {
+.bx, .followers__difference:before,
+.overview__card__difference:before, .theme-toggle--left, .theme-toggle--right {
   font-family: boxicons !important;
   font-weight: 400;
   font-style: normal;
@@ -30,7 +31,8 @@
   position: relative;
 }
 
-.bx-ul .bx, .bx-ul .followers__difference:before, .bx-ul .theme-toggle--left, .bx-ul .theme-toggle--right {
+.bx-ul .bx, .bx-ul .followers__difference:before,
+.bx-ul .overview__card__difference:before, .bx-ul .theme-toggle--left, .bx-ul .theme-toggle--right {
   font-size: inherit;
   line-height: inherit;
   position: absolute;
@@ -51,11 +53,13 @@
   content: "\ebb2";
 }
 
-.bx-caret-down:before, .followers__difference:before {
+.bx-caret-down:before, .followers__difference:before,
+.overview__card__difference:before {
   content: "\ec8c";
 }
 
-.bx-caret-up:before, .followers__difference:before {
+.bx-caret-up:before, .followers__difference:before,
+.overview__card__difference:before {
   content: "\ec95";
 }
 
@@ -440,17 +444,18 @@ input[type=submit] {
   left: 45px;
 }
 
-.card, .card--hl {
+.card, .overview__card, .card--hl {
   background-color: var(--card-bg);
   border-radius: var(--border-radius-card);
-  padding: 2.2rem 1.8rem 1.8rem;
+  padding: 1.8rem;
   transition: background-color 0.2s;
 }
-.card:hover, .card--hl:hover {
+.card:hover, .overview__card:hover, .card--hl:hover {
   background-color: var(--card-bg-hover);
 }
 
 .card--hl {
+  padding-top: 2.2rem;
   background-image: var(--text);
   background-repeat: no-repeat;
   background-size: 100% var(--border-radius-card);
@@ -512,15 +517,54 @@ input[type=submit] {
   margin-bottom: 1.2rem;
 }
 
-.followers__difference {
+.followers__difference,
+.overview__card__difference {
   font-weight: bold;
   font-size: var(--small-font-size);
 }
-.followers__difference.more {
+.followers__difference.more,
+.overview__card__difference.more {
   color: var(--lime-green);
 }
-.followers__difference.less {
+.followers__difference.less,
+.overview__card__difference.less {
   color: var(--bright-red);
+}
+/* ========================== § OVERVIEW CARD === */
+.overview__card__header,
+.overview__card__number-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview__card__header {
+  margin-bottom: 2rem;
+}
+
+.overview__card__about {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.overview__card__icon {
+  --icon-size: 1.5rem;
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.overview__card__number-container {
+  align-items: flex-end;
+}
+
+.overview__card__number {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.overview__card__difference {
+  align-self: flex-end;
+  line-height: var(--small-font-size);
 }
 
 /*# sourceMappingURL=main.css.map */

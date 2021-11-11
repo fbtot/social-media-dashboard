@@ -3,7 +3,7 @@
 .card {
   background-color: var(--card-bg);
   border-radius: var(--border-radius-card);
-  padding: 2.2rem 1.8rem 1.8rem;
+  padding: 1.8rem;
   transition: background-color 0.2s;
 
   &:hover {
@@ -13,6 +13,7 @@
 
 .card--hl {
   @extend .card;
+  padding-top: 2.2rem;
   background-image: var(--text);
   background-repeat: no-repeat;
   background-size: 100% var(--border-radius-card);
@@ -77,7 +78,8 @@
   margin-bottom: 1.2rem;
 }
 
-.followers__difference {
+.followers__difference,
+.overview__card__difference {
   font-weight: bold;
   font-size: var(--small-font-size);
 
@@ -96,4 +98,45 @@
     @extend .bx;
     @extend .bx-caret-down;
   }
+}
+
+/* ========================== § OVERVIEW CARD === */
+.overview__card {
+  @extend .card;
+}
+
+.overview__card__header,
+.overview__card__number-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview__card__header {
+  margin-bottom: 2rem;
+}
+
+.overview__card__about {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.overview__card__icon {
+  --icon-size: 1.5rem;
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.overview__card__number-container {
+  align-items: flex-end;
+}
+
+.overview__card__number {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.overview__card__difference {
+  align-self: flex-end;
+  line-height: var(--small-font-size);
 }
