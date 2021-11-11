@@ -1,0 +1,12 @@
+@use "../index.scss" as *;
+
+.header__title {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-size: 1.7rem;
+}
+
+.header__subtitle {
+  font-weight: bold;
+  color: var(--text);
+}
