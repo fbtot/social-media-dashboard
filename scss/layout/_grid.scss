@@ -1,7 +1,7 @@
 @use "../index" as *;
 
 .container {
-  --padding-container: 1.5rem;
+  --padding-container: 1.7rem;
 
   margin: 0 auto;
   max-width: calc(1110px + (var(--padding-container) * 2));
