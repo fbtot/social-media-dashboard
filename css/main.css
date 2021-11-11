@@ -74,7 +74,7 @@
   --bright-red: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+  --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youtube: hsl(348, 97%, 39%);
   --text-color: hsl(0, 0%, 7%);
   --accent-color: hsl(216, 61%, 54%);
@@ -91,6 +91,7 @@
   --h4-font-size: 1.3rem;
   --h5-font-size: 1.1rem;
   --h6-font-size: 1rem;
+  --border-radius-card: 4px;
   --background: var(--very-dark-blue);
   --top-bg-pattern: var(--very-dark-blue2);
   --card-bg: var(--dark-desaturated-blue);
@@ -417,6 +418,30 @@ input[type=submit] {
 
 .theme-toggle--right:checked ~ .theme-toggle__thumb {
   left: 45px;
+}
+
+.card, .card--hl {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 1.8rem;
+}
+
+.card--hl {
+  background-image: var(--text);
+  background-repeat: no-repeat;
+  background-size: 100% var(--border-radius-card);
+}
+.card--hl[data-social=facebook-followers] {
+  background-image: linear-gradient(var(--facebook), var(--facebook));
+}
+.card--hl[data-social=twitter-followers] {
+  background-image: linear-gradient(var(--twitter), var(--twitter));
+}
+.card--hl[data-social=instagram-followers] {
+  background-image: var(--instagram);
+}
+.card--hl[data-social=youtube-followers] {
+  background-image: linear-gradient(var(--youtube), var(--youtube));
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+@use "../index.scss" as *;
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 1.8rem;
+}
+
+.card--hl {
+  @extend .card;
+  background-image: var(--text);
+  background-repeat: no-repeat;
+  background-size: 100% var(--border-radius-card);
+
+  &[data-social="facebook-followers"] {
+    background-image: linear-gradient(var(--facebook), var(--facebook));
+  }
+
+  &[data-social="twitter-followers"] {
+    background-image: linear-gradient(var(--twitter), var(--twitter));
+  }
+
+  &[data-social="instagram-followers"] {
+    background-image: var(--instagram);
+  }
+
+  &[data-social="youtube-followers"] {
+    background-image: linear-gradient(var(--youtube), var(--youtube));
+  }
+}

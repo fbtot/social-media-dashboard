@@ -19,7 +19,7 @@ $mobile-width: $desktop-width - 1px;
 
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+  --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youtube: hsl(348, 97%, 39%);
 
   --text-color: hsl(0, 0%, 7%);
@@ -39,6 +39,7 @@ $mobile-width: $desktop-width - 1px;
   --h4-font-size: 1.3rem;
   --h5-font-size: 1.1rem;
   --h6-font-size: 1rem;
+  --border-radius-card: 4px;
 
   // Dark theme
   --background: var(--very-dark-blue);
