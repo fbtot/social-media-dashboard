@@ -2,8 +2,12 @@
 
 .header__title {
   margin-top: 1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.1rem;
   font-size: 1.7rem;
+
+  @include mq($desktop-width, up) {
+    font-size: 2rem;
+  }
 }
 
 .header__subtitle {

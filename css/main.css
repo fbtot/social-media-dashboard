@@ -280,8 +280,15 @@ input[type=submit] {
 
 .header__title {
   margin-top: 1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.1rem;
   font-size: 1.7rem;
+  /* mixin mq */
+  /* end mixin mq */
+}
+@media screen and (min-width: 800px) {
+  .header__title {
+    font-size: 2rem;
+  }
 }
 
 .header__subtitle {
@@ -298,6 +305,26 @@ input[type=submit] {
 
 .header {
   display: flex;
+  /* mixin mq */
+  /* end mixin mq */
+}
+@media screen and (max-width: 799px) {
+  .header {
+    flex-wrap: wrap;
+  }
+}
+
+.header__title-container {
+  /* mixin mq */
+  /* end mixin mq */
+}
+@media screen and (max-width: 799px) {
+  .header__title-container {
+    flex: 1 0 100%;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 1.4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .followers-container,

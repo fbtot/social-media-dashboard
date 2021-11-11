@@ -10,6 +10,19 @@
 
 .header {
   display: flex;
+
+  @include mq($desktop-width, down) {
+    flex-wrap: wrap;
+  }
+}
+
+.header__title-container {
+  @include mq($desktop-width, down) {
+    flex: 1 0 100%;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 1.4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .followers-container,
