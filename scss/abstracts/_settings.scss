@@ -1,3 +1,20 @@
+@mixin theme-props($theme) {
+  @if $theme == dark {
+    --background: var(--very-dark-blue);
+    --top-bg-pattern: var(--very-dark-blue2);
+    --card-bg: var(--dark-desaturated-blue);
+    --card-bg-hover: var(--dark-desaturated-blue2);
+    --text: var(--desaturated-blue);
+    --text2: var(--white);
+  } @else if $theme == light {
+    --background: var(--white);
+    --top-bg-pattern: var(--very.pale-blue);
+    --card-bg: var(--light-grayish-blue);
+    --card-bg-hover: var(--light-grayish-blue2);
+    --text: var(--dark-grayish-blue);
+    --text2: var(--very-dark-blue);
+  }
+}
 $base-font-size: 14px;
 $small-font-size: 14px * 0.85;
 $desktop-width: 800px;
@@ -7,12 +24,14 @@ $mobile-width: $desktop-width - 1px;
   --very-dark-blue: hsl(230, 17%, 14%); //-bg
   --very-dark-blue2: hsl(232, 19%, 15%); // top bg pattern
   --dark-desaturated-blue: hsl(228, 28%, 20%); // card bg
+  --dark-desaturated-blue2: hsl(228, 28%, 24%); // card bg
   --desaturated-blue: hsl(228, 34%, 66%); // text
   --white: hsl(0, 0%, 100%); // text
   --toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --toggle2: hsl(230, 22%, 74%);
   --very-pale-blue: hsl(225, 100%, 98%); // top bg pattern
   --light-grayish-blue: hsl(227, 47%, 96%); // card bg
+  --light-grayish-blue2: hsl(229, 16%, 86%); // card bg
   --dark-grayish-blue: hsl(228, 12%, 44%); // text
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
@@ -42,36 +61,20 @@ $mobile-width: $desktop-width - 1px;
   --border-radius-card: 4px;
 
   // Dark theme
-  --background: var(--very-dark-blue);
-  --top-bg-pattern: var(--very-dark-blue2);
-  --card-bg: var(--dark-desaturated-blue);
-  --text: var(--desaturated-blue);
-  --text2: var(--white);
+  @include theme-props(dark);
 }
 
 .light-theme {
-  --background: var(--white);
-  --top-bg-pattern: var(--very.pale-blue);
-  --card-bg: var(--light-grayish-blue);
-  --text: var(--dark-grayish-blue);
-  --text2: var(--very-dark-blue);
+  @include theme-props(light);
 }
 @media (prefers-color-scheme: light) {
   .prefers-color-scheme {
-    --background: var(--white);
-    --top-bg-pattern: var(--very.pale-blue);
-    --card-bg: var(--light-grayish-blue);
-    --text: var(--dark-grayish-blue);
-    --text2: var(--very-dark-blue);
+    @include theme-props(light);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .prefers-color-scheme {
-    --background: var(--very-dark-blue);
-    --top-bg-pattern: var(--very-dark-blue2);
-    --card-bg: var(--dark-desaturated-blue);
-    --text: var(--desaturated-blue);
-    --text2: var(--white);
+    @include theme-props(dark);
   }
 }
