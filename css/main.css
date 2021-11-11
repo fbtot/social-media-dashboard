@@ -303,6 +303,12 @@ input[type=submit] {
   color: var(--text);
 }
 
+.overview__title {
+  margin-top: 3.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.7rem;
+}
+
 .container {
   --padding-container: 1.7rem;
   margin: 0 auto;
