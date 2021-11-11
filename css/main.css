@@ -162,6 +162,11 @@ html {
 }
 
 body {
+  /* @mixin center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* end @mixin center */
   min-width: 100vw;
   min-height: 100vh;
   line-height: 1.6em;
@@ -316,6 +321,7 @@ input[type=submit] {
 .container {
   --padding-container: 1.7rem;
   margin: 0 auto;
+  width: 100%;
   max-width: calc(1110px + var(--padding-container) * 2);
   padding: var(--padding-container);
 }

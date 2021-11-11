@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  @include center(flex);
   min-width: 100vw;
   min-height: 100vh;
   line-height: 1.6em;
