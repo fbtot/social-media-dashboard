@@ -3,7 +3,7 @@
 .card {
   background: var(--card-bg);
   border-radius: var(--border-radius-card);
-  padding: 1.8rem;
+  padding: 2.2rem 1.8rem 1.8rem;
 }
 
 .card--hl {
@@ -26,5 +26,69 @@
 
   &[data-social="youtube-followers"] {
     background-image: linear-gradient(var(--youtube), var(--youtube));
+  }
+}
+
+/* ========================== § FOLLOWERS CARD === */
+.followers__card {
+  text-align: center;
+}
+.followers__social-container {
+  display: flex;
+  justify-content: center;
+}
+
+.followers__social__img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.followers__social__username {
+  margin-left: 0.7rem;
+  font-size: var(--small-font-size);
+  font-weight: bold;
+  color: var(--text);
+}
+
+.followers__followers,
+.followers__followers-sign,
+.followers__followers-difference {
+  display: block;
+}
+
+.followers__followers {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.followers__followers-sign {
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+  letter-spacing: 0.4em;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+
+.followers__difference {
+  font-weight: bold;
+  font-size: var(--small-font-size);
+
+  &.more {
+    color: var(--lime-green);
+  }
+  &:before {
+    @extend .bx;
+    @extend .bx-caret-up;
+  }
+
+  &.less {
+    color: var(--bright-red);
+  }
+  &:before {
+    @extend .bx;
+    @extend .bx-caret-down;
   }
 }

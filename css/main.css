@@ -6,7 +6,7 @@
   src: url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.eot);
   src: url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.eot) format("embedded-opentype"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.woff2) format("woff2"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.woff) format("woff"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.ttf) format("truetype"), url(https://unpkg.com/boxicons@2.0.9/fonts/boxicons.svg?#boxicons) format("svg");
 }
-.bx, .more:before, .less:before, .theme-toggle--left, .theme-toggle--right {
+.bx, .followers__difference:before, .theme-toggle--left, .theme-toggle--right {
   font-family: boxicons !important;
   font-weight: 400;
   font-style: normal;
@@ -30,7 +30,7 @@
   position: relative;
 }
 
-.bx-ul .bx, .bx-ul .more:before, .bx-ul .less:before, .bx-ul .theme-toggle--left, .bx-ul .theme-toggle--right {
+.bx-ul .bx, .bx-ul .followers__difference:before, .bx-ul .theme-toggle--left, .bx-ul .theme-toggle--right {
   font-size: inherit;
   line-height: inherit;
   position: absolute;
@@ -51,11 +51,11 @@
   content: "\ebb2";
 }
 
-.bx-caret-down:before, .less:before {
+.bx-caret-down:before, .followers__difference:before {
   content: "\ec8c";
 }
 
-.bx-caret-up:before, .more:before {
+.bx-caret-up:before, .followers__difference:before {
   content: "\ec95";
 }
 
@@ -81,7 +81,7 @@
   --grey300: hsl(0, 0%, 70%);
   --grey500: hsl(0, 0%, 50%);
   --base-font-size: 14px;
-  --small-font-size: 12.6px;
+  --small-font-size: 11.9px;
   --line-height: 1.6em;
   --body-font-family: "Inter", sans-serif;
   --headings-font-family: var(--body-font-family);
@@ -431,7 +431,7 @@ input[type=submit] {
 .card, .card--hl {
   background: var(--card-bg);
   border-radius: var(--border-radius-card);
-  padding: 1.8rem;
+  padding: 2.2rem 1.8rem 1.8rem;
 }
 
 .card--hl {
@@ -450,6 +450,61 @@ input[type=submit] {
 }
 .card--hl[data-social=youtube-followers] {
   background-image: linear-gradient(var(--youtube), var(--youtube));
+}
+
+/* ========================== § FOLLOWERS CARD === */
+.followers__card {
+  text-align: center;
+}
+
+.followers__social-container {
+  display: flex;
+  justify-content: center;
+}
+
+.followers__social__img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.followers__social__username {
+  margin-left: 0.7rem;
+  font-size: var(--small-font-size);
+  font-weight: bold;
+  color: var(--text);
+}
+
+.followers__followers,
+.followers__followers-sign,
+.followers__followers-difference {
+  display: block;
+}
+
+.followers__followers {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.followers__followers-sign {
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+  letter-spacing: 0.4em;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+
+.followers__difference {
+  font-weight: bold;
+  font-size: var(--small-font-size);
+}
+.followers__difference.more {
+  color: var(--lime-green);
+}
+.followers__difference.less {
+  color: var(--bright-red);
 }
 
 /*# sourceMappingURL=main.css.map */
