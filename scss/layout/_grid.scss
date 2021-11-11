@@ -10,9 +10,14 @@
 
 .header {
   display: flex;
+  margin-bottom: 2.7rem;
 
   @include mq($desktop-width, down) {
     flex-wrap: wrap;
+  }
+
+  @include mq($desktop-width, up) {
+    margin-bottom: 3.2rem;
   }
 }
 
