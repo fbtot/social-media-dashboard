@@ -63,14 +63,14 @@
   --very-dark-blue: hsl(230, 17%, 14%);
   --very-dark-blue2: hsl(232, 19%, 15%);
   --dark-desaturated-blue: hsl(228, 28%, 20%);
-  --dark-desaturated-blue2: hsl(228, 28%, 24%);
+  --dark-desaturated-blue2: hsl(228, 26%, 24%);
   --desaturated-blue: hsl(228, 34%, 66%);
   --white: hsl(0, 0%, 100%);
   --toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --toggle2: hsl(230, 22%, 74%);
   --very-pale-blue: hsl(225, 100%, 98%);
   --light-grayish-blue: hsl(227, 47%, 96%);
-  --light-grayish-blue2: hsl(229, 16%, 86%);
+  --light-grayish-blue2: hsl(233, 33%, 90%);
   --dark-grayish-blue: hsl(228, 12%, 44%);
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
@@ -435,9 +435,13 @@ input[type=submit] {
 }
 
 .card, .card--hl {
-  background: var(--card-bg);
+  background-color: var(--card-bg);
   border-radius: var(--border-radius-card);
   padding: 2.2rem 1.8rem 1.8rem;
+  transition: background-color 0.2s;
+}
+.card:hover, .card--hl:hover {
+  background-color: var(--card-bg-hover);
 }
 
 .card--hl {

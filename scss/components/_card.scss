@@ -1,9 +1,14 @@
 @use "../index.scss" as *;
 
 .card {
-  background: var(--card-bg);
+  background-color: var(--card-bg);
   border-radius: var(--border-radius-card);
   padding: 2.2rem 1.8rem 1.8rem;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--card-bg-hover);
+  }
 }
 
 .card--hl {
