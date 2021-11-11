@@ -380,7 +380,7 @@ input[type=submit] {
 .overview-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem 2rem;
+  grid-gap: 1.5rem 2rem;
   /* mixin mq */
   /* end mixin mq */
   /* mixin mq */
