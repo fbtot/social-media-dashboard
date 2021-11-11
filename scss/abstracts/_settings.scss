@@ -8,7 +8,7 @@
     --text2: var(--white);
   } @else if $theme == light {
     --background: var(--white);
-    --top-bg-pattern: var(--very.pale-blue);
+    --top-bg-pattern: var(--very-pale-blue);
     --card-bg: var(--light-grayish-blue);
     --card-bg-hover: var(--light-grayish-blue2);
     --text: var(--dark-grayish-blue);

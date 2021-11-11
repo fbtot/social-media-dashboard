@@ -14,6 +14,7 @@ html {
 
 body {
   @include center(flex);
+  position: relative;
   min-width: 100vw;
   min-height: 100vh;
   line-height: 1.6em;
@@ -21,6 +22,21 @@ body {
   color: var(--text2);
   background-color: var(--background);
   transition: color 0.2s, background-color 0.2s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    width: 100%;
+    height: 430px;
+    border-radius: 0 0 2rem 2rem;
+    background-color: var(--top-bg-pattern);
+
+    @include mq($desktop-width, down) {
+      height: 330px;
+    }
+  }
 }
 
 /* ========================== § TYPOGRAPHY === */

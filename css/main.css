@@ -108,7 +108,7 @@
 
 .light-theme {
   --background: var(--white);
-  --top-bg-pattern: var(--very.pale-blue);
+  --top-bg-pattern: var(--very-pale-blue);
   --card-bg: var(--light-grayish-blue);
   --card-bg-hover: var(--light-grayish-blue2);
   --text: var(--dark-grayish-blue);
@@ -118,7 +118,7 @@
 @media (prefers-color-scheme: light) {
   .prefers-color-scheme {
     --background: var(--white);
-    --top-bg-pattern: var(--very.pale-blue);
+    --top-bg-pattern: var(--very-pale-blue);
     --card-bg: var(--light-grayish-blue);
     --card-bg-hover: var(--light-grayish-blue2);
     --text: var(--dark-grayish-blue);
@@ -167,6 +167,7 @@ body {
   justify-content: center;
   align-items: center;
   /* end @mixin center */
+  position: relative;
   min-width: 100vw;
   min-height: 100vh;
   line-height: 1.6em;
@@ -174,6 +175,23 @@ body {
   color: var(--text2);
   background-color: var(--background);
   transition: color 0.2s, background-color 0.2s;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 430px;
+  border-radius: 0 0 2rem 2rem;
+  background-color: var(--top-bg-pattern);
+  /* mixin mq */
+  /* end mixin mq */
+}
+@media screen and (max-width: 959px) {
+  body:before {
+    height: 330px;
+  }
 }
 
 /* ========================== § TYPOGRAPHY === */
