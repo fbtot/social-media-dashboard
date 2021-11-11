@@ -17,8 +17,9 @@
 }
 $base-font-size: 14px;
 $small-font-size: 14px * 0.85;
-$desktop-width: 800px;
-$mobile-width: $desktop-width - 1px;
+$desktop-width: 960px;
+$tablet-width: 600px;
+$mobile-width: $tablet-width - 1px;
 
 :root {
   --very-dark-blue: hsl(230, 17%, 14%); //-bg

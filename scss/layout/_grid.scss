@@ -39,6 +39,10 @@
   @include mq($desktop-width, up) {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  @include mq($tablet-width, $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .followers__header,
